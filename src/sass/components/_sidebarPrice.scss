@@ -1,0 +1,108 @@
+.price-controls-wrap{
+    .price-controls{
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .price__value {
+        width: 80px;
+        border-radius: 5px;
+        border-color: #dee1e4;
+        margin-left: 14px;
+    }
+    .min-price{
+        margin-right: 40px;
+    }
+}
+
+/***********************/
+
+.range__controls{
+    position: relative;
+    height: 40px;
+    margin: 15px 0;
+    overflow: hidden; 
+    padding: 0 3px;
+
+    .range__scale{
+        margin-top: 15px;
+        // margin-left: 10px;
+        height: 3px;
+        background-color: #dee1e4;
+    }
+
+    .range__bar{
+        height: 3px;
+        background-color: $color-brand;
+        // width: 54%
+    }
+
+/***********************/
+
+    .toggle{
+        width: 8px;
+        height: 13px;
+        background-color: black;
+        display: inline-block;
+        position: absolute;
+        // bottom: 2px;
+        cursor: pointer;
+        background: url(../img/images/toggle.png) no-repeat;
+       /* position: relative;
+        &:before{
+            content:"";
+            width: 0;
+            height: 0;
+            right: 14px;
+            bottom: 10px;
+            position: absolute;
+            border-top: 5px solid white;
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            border-bottom: 5px solid black;
+        }*/
+    }
+
+    .min-toggle{
+        left: 0;
+        /*width: 10px;
+        height: 10px;
+        background-color: black;
+        position: relative;
+        z-index: 1;
+        &:before{
+            content:"";
+            width: 0;
+            height: 0;
+            right: 0px;
+            bottom: 10px;
+            position: absolute;
+            border-top: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid black;
+        }*/
+    }
+    .max-toggle{
+        right: 0;
+        /*width: 10px;
+        height: 10px;
+        background-color: black;
+        position: relative;
+        z-index: 1;
+        
+        &:before{
+            content:"";
+            width: 0;
+            height: 0;
+            // right: 00px;
+            bottom: 10px;
+            position: absolute;
+            border-top: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid black;
+        }*/
+    }
+}
+

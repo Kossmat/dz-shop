@@ -1,0 +1,31 @@
+@import "components/icomoon";
+
+.accordeon {
+	// width: 300px;
+	// margin: 100px;
+}
+
+.accordeon__item {
+	padding: 15px 30px;
+    border-bottom: 1px solid #dee1e4;
+
+    &:last-of-type{
+        border: none;
+    }
+}
+
+.show-widget{
+	&:after {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    right: 10px;
+	    top: 10px;
+	    opacity: .2;
+	    background: url('../img/images/down.png') 0 0 no-repeat;
+	    height: 11px;
+	    width: 18px;
+	}
+}
+
+

@@ -1,0 +1,22 @@
+//- header.jade
+
+//- - var topMenu = { 'Главная':'index.html','Фичи':'feat.html','Дрючи':'dr.html','О нас':'about.html','Контакты':'conntact.html' }
+
+
+//- header.base-header
+//- 	nav
+//- 		ul
+//- 			each linkPath, linkName in topMenu
+//- 				li: a(href=linkPath) #{linkName}
+
+include mixin
+
++menu([
+    {'title':'Планшеты' ,'link':'pl.html'},
+    {'title':'Мобильные телефоны' ,'link':'index.html'},
+    {'title':'Mp3 плееры' ,'link':'dr.html'},
+    {'title':'Персональные компьютеры' ,'link':'about.html'},
+    {'title':'Ноутбуки' ,'link':'conntact.html'},
+    {'title':'Аксесуары' ,'link':'conntact.html'},
+    {'title':'Бытовая техника' ,'link':'conntact.html'}
+    ])

@@ -1,0 +1,30 @@
+//- footer.jade
+include mixin
+footer.footer
+    .container
+        span.footer__logo-wrap
+            a.logo-wrap__link
+                img.logo(src="img/logo-foot.png", alt="cooltech")
+            span.logo-text
+                |COOLTECH         
+        .footer__contacts
+            .socials
+                ul.social__list
+                    - var socials = ['icon-vk', 'icon-fb', 'icon-tw']
+                        each social in socials
+                            li.socials__item
+                                a(href="#" class="socials__link socials__link_" + social)
+                 
+            +nav('footer-nav', ['Планшеты', 'Мобильные телефоны', "Mp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксесуары", "Бытовая техника"])        
+            //- +menu([
+            //- {'title':'Планшеты' ,'link':'#'},
+            //- {'title':'Мобильные телефоны' ,'link':'index.html'},
+            //- {'title':'Mp3 плееры' ,'link':'#'},
+            //- {'title':'Персональные компьютеры' ,'link':'#'},
+            //- {'title':'Ноутбуки' ,'link':'#'},
+            //- {'title':'Аксесуары' ,'link':'#'},
+            //- {'title':'Бытовая техника' ,'link':'#'}
+            //- ])
+
+    .footer__copyright
+        | All rights reserved. 2015. no copy alowed

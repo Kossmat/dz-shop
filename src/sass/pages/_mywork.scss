@@ -1,0 +1,169 @@
+.myWork{ 
+    background-color: #f6f5f4;
+    // padding: 40px;
+    border-radius: 5px;
+    border: 1px solid #c4c3c3;
+    margin-bottom: 100px;
+}
+
+.myWork-wrap{
+    // @include clearfix;
+    background-color: #f6f5f4;
+    padding: 40px 32px;
+    padding-right: 48px;
+    margin-bottom: 240px;
+}
+
+.myWork-item{
+    // display: inline-block;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #c4c3c3;
+
+  /*  &:last-of-type img{
+        display: inline-block;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }*/
+}
+
+myWork-image_wrap{
+    max-width: 118px;
+    max-height: 164px;
+}
+
+.myWork-image{
+    width: 100%;
+}
+
+
+.myWork-caption{
+    text-align: center;
+}
+
+.myWork-caption_name{
+    color: #727070;
+    background-color: #f2f2f2;
+    padding: 10px 3px;
+    font-size: 14px;
+    display: block;
+}
+
+.myWork-caption_text{
+    background-color: #fff;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.addnew .icon{
+    display: block;
+    padding: 15px 15px 10px;
+    background-color: #f7f7f7;
+    width: 60px;
+    margin: 25px auto;
+
+    .icon-polaroid {
+        // background-position: -296px -252px;
+    }
+}
+
+/*******************************/
+
+.myWork-image_wrap{
+    position: relative;
+}
+
+.myWork-image{
+    width: 100%;
+    height: 100%;
+}
+
+.myWork-image_hover{
+    width: 160px;
+    height: auto;
+    overflow: hidden;
+}
+
+.myWork-look{
+    position: absolute;
+    bottom: 50%;
+    font-size: 11px;
+    color: #fff;
+}
+
+.myWork-look-wrap {
+    text-align: center;
+    display: block;
+    
+    margin-top: 48px;
+    background: #000;
+    width: 100%;
+}
+
+/*******************************/
+
+ .myWork-item{
+    text-align: center;
+    position: relative;
+}
+
+.myWork-item .myWork-image_hover{
+    width: 100%;
+    height: 114px;
+}
+
+.myWork-item .myWork-image{
+    width: 100%;
+    height: 100%;
+}
+
+.myWork-item:hover .myWork-image{
+    -moz-opacity: 0.20;
+    opacity:.20;
+    filter: alpha(opacity=20);
+}
+
+.myWork-item:hover .myWork-image_hover{
+    background: #000;
+}
+
+.myWork-item .myWork-looks-wrap{
+    position:absolute;
+    width: 100%;
+    top: 70px;
+    left: 25%;
+    // right: 22%;
+    text-align: center;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.myWork-item .myWork-look {
+    font-family: 'fira_sansbook';
+    font-size: 12px;
+    border: solid 2px #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px; 
+    padding: 0 4px;
+    display: block;
+}
+
+.myWork-item:hover .myWork-looks-wrap {    
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.myWork-item .myWork-look{
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
+
+
+

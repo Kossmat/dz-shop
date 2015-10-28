@@ -1,0 +1,181 @@
+.addpro{
+    /*height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;*/
+    .name-form{
+        padding-left: 0;
+    }
+}
+
+#new-project-popup {
+    display:none; 
+}
+
+
+.addpro-wrap{
+    position: relative;
+}
+
+
+.addpro .login-form{
+    padding-top: 0;
+    height: 480px;
+    width: 365px;
+    padding-left: 24px;
+    padding-right: 20px;
+}
+
+.addpro .login-form input[type="text"]{
+    padding-left: 10px;
+    font-size: 11px;
+    width: 320px;
+}
+
+
+
+.addpro .login-form .btn {
+    padding: 10px 30px;
+    display: block;
+    margin: 5px auto;
+    border-bottom: 5px solid;
+    &:hover{
+        border-bottom: 0;
+        border-top: 3px solid;
+    }
+}
+
+.icon-cloud{
+    position: relative;
+    right: 35px;
+    background-color: #efedec;
+    padding: 10px;
+}
+
+.icon-crest{
+    position: relative;
+    float: right;
+    top: 10px;
+    margin-bottom: 5px;
+}
+
+.addpro #textarea{
+    width: 320px;
+    font-size: 11px;
+}
+
+
+.addpro .addpro-button {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    right: 11px;
+    display: block;
+    height: 43px;
+    width: 55px;
+    box-sizing: border-box;
+    border-radius: 0px 5px 5px 0;
+    border: 1px solid #d6d5d3;
+    background-image: url(../img/cloud.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: 15px 12px, 0 0;
+}
+
+/***************/
+.login-field input[type="text"],::-moz-placeholder,
+.login-field input[type="password"]::-moz-placeholder,
+.login-field input[type="file"]::-moz-placeholder,
+.login-field textarea[type="text"]::-moz-placeholder{
+    color: cadetblue;
+}
+
+.login-field input[type="text"],:-ms-input-placeholder,
+.login-field input[type="password"]:-ms-input-placeholder,
+.login-field input[type="file"]:-ms-input-placeholder,
+.login-form textarea[type="text"]:-ms-input-placeholder{
+    color: cadetblue;
+}
+
+.login-field input[type="text"],::-webkit-input-placeholder,
+.login-field input[type="password"]::-webkit-input-placeholder,
+.login-field input[type="file"]::-webkit-input-placeholder,
+.login-field textarea[type="text"]::-webkit-textarea-placeholder{
+    color: cadetblue;
+}
+/***************/
+.file-upload{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    // height: 4em;
+
+    mark{
+        cursor: pointer;
+        background-color: transparent;
+        padding-left: 10px;
+        color: cadetblue;
+        font-size: 11px;
+    }  
+}
+
+.wrap-upload{
+    border: 1px solid #d6d5d3;
+    border-radius: 5px;
+    padding: 7px 0 10px;
+    width: 320px;
+    height: 42px;
+
+    &:focus{
+        border-color: #ef9d82;
+        outline-color: #ef9d82;
+        outline-offset: 0;
+    }
+    &:hover{
+        border-color: #61cfb0;
+    }
+}
+
+
+.file-upload input[type="file"]{
+    width: 320px;
+    position: absolute;
+    top: 21%;
+    right: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.file-upload input[type="file"]::-webkit-input-placeholder{
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        padding-left: 10px;
+        color: green;
+    }
+
+
+.icon-cloud{
+    cursor: pointer;
+    float: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+    bottom: 6px;
+    left: 0;
+}
+
+.has-error{
+    border-color: #ef9d82!important;
+}
+
+
+

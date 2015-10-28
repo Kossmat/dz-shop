@@ -1,0 +1,257 @@
+/*.maincontent{
+	padding-top: 25px;
+	padding-bottom: 30px;
+    }*/
+
+.main__header{
+	background-color: #e4ebee;
+	border: $border;
+	border-radius: $border-radius;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+
+	.filter__select{
+		border: $border;
+		border-radius: $border-radius;
+		padding: 5px 10px; 
+	}
+
+	.view-catalog__list{
+		display: inline-table;
+		float: right;
+		padding-top: 5px;
+	}
+
+	.view{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		bottom: 14px;
+	}
+
+	.view__title{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+
+	.view__list{
+		display: inline-block;
+		font-size: 0;	
+		margin-left: 15px;		
+	}
+
+	.view__item{
+		display: inline-block;
+		// border-left: 1px solid grey;
+		&:nth-of-type(1){
+			.view__link{
+				&:after{
+					display: block;
+		        	background: url('../img/images/v_horiz.png') no-repeat;
+				}
+			}
+		}
+		&:nth-of-type(2){
+			.view__link{
+				&:after{
+					display: block;
+		        	background: url('../img/images/v_vert.png') no-repeat;
+				}
+			}
+		}
+		&:nth-of-type(3){
+			.view__link{
+				&:after{
+					display: block;
+		        	background: url('../img/images/v_list.png') no-repeat;
+				}
+			}
+		}
+	}
+
+	.view__link{
+		position: relative;
+		display: block;
+		width: 100%;
+    	padding: 19px 17px 16px;
+		&:after{
+			content: '';
+	        display: block;
+	        position: absolute;
+			height: 16px;
+	        width: 16px;
+		}			
+	}
+}
+
+.content__item{
+	display: inline-block;
+	width: 232px;
+	background-color: $color-white;
+	border-radius: 5px;
+	padding: 10px;
+	margin-right: 17px;
+	margin-bottom: 20px;
+	&:nth-of-type(3n){
+		margin-right: 0;
+	}
+	&:nth-of-type(4){
+		.content__item_description{
+			&:nth-of-type(odd){
+				color: transparent;
+			}
+		}
+	}
+	
+	.content__item_name{
+		text-align: center;
+		padding: 15px 0 20px;
+		font-size: 14px;
+		font-family: 'open_sanssemibold', sans-serif;
+	}
+
+	.item_name-galaxi{
+		padding-bottom: 0;
+	}
+
+/*********************/
+
+.content__item_img-wrap{
+	// display: inline-block;
+	margin: 0 auto;
+	padding: 3px 20px;
+	border: 1px solid #e4ebee;
+	width: 135px;
+}
+
+.content__item_img{
+
+}
+
+.content__list_img-load{
+	display: block;
+	margin-top: 15px;
+	margin-left: 33px;
+}
+
+.content__item_img-load-wrap{
+	display: inline-block;
+	margin-left: 10px;
+	border: 1px solid #e4ebee;
+	padding: 2px 5px;
+	&:last-of-type{
+		margin-right: 0;
+	}
+}
+
+.content__item_img-load-wrap_active{
+	border-color: $color-brand;
+}
+
+/*********************/
+	.content__item_description{
+		&:nth-of-type(odd){
+			background-color: #e6e6e6;
+		}
+	}
+	.description__text-right{
+		float: right;
+	}
+}
+
+.description__rating{
+	// display: block;
+	// margin: 0 auto;
+	margin-top: 15px;
+	text-align: center;
+}
+
+.count{
+	padding: 0 12px;
+	border-radius: 11px;
+	background-color: #b5beca;
+	color: $color-white;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.price{
+	text-align: center;
+	font-size: 18px;
+	padding-top: 10px;
+	&:after{
+		content: "";
+    	display: inline-block;
+		background: url(../img/images/rub.png) no-repeat;
+		margin-left: 5px;
+		width: 16px;
+		height: 14px;
+	}
+}
+
+.btn-group{
+	/*display: inline-table;*/
+	// vertical-align: middle;
+	position: relative;
+	span{
+		// display: inline-table;
+		// vertical-align: middle;
+		display: inline-block;
+		padding-top: 15px;
+		padding-left: 20px;
+		&:before{
+			content: "°";
+			color: #60ac49;
+			background-color: #60ac49;
+			border-radius: 100%;
+			padding: 3px;
+    		font-size: 0;
+    		position: absolute;
+    		bottom: 20%;
+    		left: 10px;
+		}
+	}
+}
+
+.btn{
+	background-color: $color-brand;
+	border-radius: 3px;
+	border: none;
+	color: $color-white;
+	font-weight: 500;
+	padding: 10px 15px;
+	float: right;
+	margin-top: 5px;
+	margin-left: 10px;
+	// vertical-align: middle;
+}
+
+/*****************/
+
+/*.info{
+	margin-top: 30px;
+}*/
+
+.info__title{
+	margin-top: 30px;
+}
+
+.info__column{
+	// margin: 0 -20px -20px -20px;
+	// margin-right: 40px;
+	margin-bottom: 30px;
+	// width: 530px;
+	&:last-of-type{
+		// margin-right: 0;
+	}
+	.info__paragraph{
+		margin-top: 20px;
+		text-indent: 36px;
+		text-align: justify;
+	}
+}
+
+.column{
+	padding-left: 20px;
+}

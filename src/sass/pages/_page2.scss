@@ -1,0 +1,30 @@
+.content__item_horizon{
+    width: 100%;
+    text-align: left;
+
+    .content__item_descrip-wrap{
+        display: inline-block;
+        width: 365px;
+    }
+
+    .item__right-group{
+        float: right;
+        width: 140px;
+    }
+
+    .price {
+        padding-bottom: 30px;
+    }
+
+    .btn-group span{
+        float: right;
+        &:before{
+            content: "°";
+            position: absolute;
+            top: 69px;
+            right: 83px;
+            bottom: 0; 
+            left: 0;
+        }
+    }
+}

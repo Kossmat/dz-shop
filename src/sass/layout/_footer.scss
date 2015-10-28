@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+}
+
+.wrapper{
+	clear: both;
+    height: auto !important;
+    margin-bottom: -80px;
+    min-height: 100%;
+}
+
+/*.layout_footer{
+	height: 80px;
+}*/
+/***************************/
+.footer{
+	background-color: #eff3f7;
+    color: $color-white;
+	font-size: 12px;
+    background-image: url(../img/footpattern.jpg);
+	position: relative;
+	clear: both;
+    min-height: 220px;
+    /*bottom: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    position: absolute;*/
+}
+
+
+.copyright{
+		background-color: #eff3f7;
+		color: #8f9da8;
+		padding: 15px 0;
+		font-family: open_sanslight, sans-serif;
+		display: inline-block;
+        text-align: center;
+        padding: 30px 0;
+}
+
+.footer__logo-wrap{
+    padding: 70px 0 85px;    
+    display: inline-block;
+}
+
+
+.footer__contacts{
+    display: inline-block;
+    float: right;
+    padding: 25px 0;
+    width: 557px;
+    .footer-nav{
+        .footer-nav__list{
+            text-align: right;
+        }
+        .footer-nav__item {
+            display: inline-block;
+        }
+        
+        .footer-nav__link{
+            color: $color-white;
+            text-decoration: underline;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+}
+
+.footer__copyright{
+    border-top: 1px solid grey;
+    text-align: center;
+    padding: 10px 0;
+}

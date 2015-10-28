@@ -1,0 +1,267 @@
+//490px
+@include MQ(S) {
+.container{
+	@include container(400px);
+}
+
+.wrapper{
+	margin-bottom: 0;
+}
+
+.main{
+	padding-bottom: 0;
+}
+
+.logo-wrap {
+    height: 54px;
+    width: 75px;
+}    
+/* ***************** */
+.icon-burger.mobile{
+    display: block;
+}
+
+.icon-burger.planshet{
+	display: none;
+}
+
+.base-header{
+	.social-icons{
+		display: none;
+	}
+}
+
+	.icon-burger{
+		display: block;
+		float: right;
+		margin-top: 40px;
+		&:hover{
+			.menu-burger{
+			    display: block;
+				right: 145px;
+				width: 200px;
+				z-index: 1;
+			}	
+		}
+	}
+
+	.menu-burger{
+		display: none;
+
+	} 
+ 
+.container-base-header{
+	@include container(400px);
+}
+
+.menu-burger{
+	// width: 60%;
+	float: left;
+	position: relative;
+	top: 44px;
+	right: 50%;
+	&:after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: 15%;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-bottom-color: #f7f8fa;
+    }
+
+	.navigation-item{
+		font-size: 16px;
+	}
+}
+/* ***************** */
+
+.info{
+	@include full;
+}
+
+.menu{
+	text-align: center;
+	display: none;
+}
+/* ***************** */
+
+
+.infobox{
+	text-align: center;
+	margin-bottom: 20px;
+	// margin: 0 auto;
+	.container-header{
+		// text-align: center;
+	}
+}
+
+.worksheet-wrap{
+	@include full;
+	padding: 20px;
+	padding-top: 0;
+	text-align: left
+}
+
+.image-wrap{
+	@include full;
+}
+
+.avatar-box{
+	display: inline-block;
+	text-align: center;
+}
+
+.worksheet-what,
+.worksheet-info,
+.where{
+	font-size: 15px;
+}
+
+period{
+	font-size: 14px;
+}
+
+bottom-contacts{
+	margin-top: 20px;	
+}
+
+.contacts-header{
+	display: none;
+}	
+
+/* ***************** */
+.infobox-item{
+	padding: 12px;
+}
+
+.icon{
+	display: inline-block;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+	margin-bottom: 10px;
+	    padding: 12px 10px 13px;
+}
+
+.item-info{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/* ***************** */
+.myWork{
+	padding-bottom: 160px;
+	margin-bottom: 20px !important;
+}
+
+.myWork-wrap{
+	padding: 20px 60px !important;
+}
+
+.myWork-item{
+    @include gallery(1 of 1);
+    clear: both !important;
+    width: 280px;
+}
+
+.myWork-image_hover {
+    width: 278px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.addnew{
+	display: none;
+}
+/* ***************** */
+/* ********Callback********* */
+
+.callback-wrap {
+    padding: 20px 60px !important;
+}
+
+.form-group{
+	width: 100%;
+	display: block !important;
+}
+
+.input{
+	width: 280px !important;
+}
+
+.input-code{
+	.input{
+		width: 43% !important;
+	}
+	.capture {
+		padding-right: 10px !important;
+		img{
+			display: inline-block;
+			width: 144px;
+			height: 70px;
+		}
+	}	
+}
+
+.btn-group{
+	.sub, .clr{
+		margin: 0;
+	}
+}
+
+/* ***************** */
+/* ***************** */
+.bottom-contacts-wrap{
+	@include full;
+	.contacts{
+		// @include clearfix;
+		.contacts-link{
+			font-size: 24px;
+		}
+	}
+	.social-icons{
+		display: block;
+		float: none;
+	}
+	.social-item{
+		margin: 0 13px;
+	}
+
+	.icon-cont {
+		display: inline-block !important;
+		vertical-align: middle;
+	}
+	.contact-text {
+		margin-left: 10px;
+	}
+}
+/* ***************** */
+.icon-unlock{
+	display: none;
+}
+
+.copyright{
+	font-size: 8px;
+	font-family: 'open_sanslight', sans-serif;
+}
+/* ***************** */
+
+.fixid-bottom-footer{
+	// position: relative;
+}
+
+.lock{
+    padding-left: 20px;
+    width: 100px;
+}
+
+	.float-left{
+		float: none;
+	}	
+
+	.hide{
+		display: block;
+	}
+} //end MQ

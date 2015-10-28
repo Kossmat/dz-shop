@@ -1,0 +1,112 @@
+.icon-fb{
+	&:hover{
+  		background-position: -360px -60px;
+  		transition: top 2s ease-out 0.5s
+	}
+}
+
+.icon-vk{
+	&:hover{
+		background-image: url(../img/sprite.png);
+		background-position: -360px -180px;
+        transition: top 2s ease-out 0.5s
+	}
+}	
+
+
+.icon-tw{
+	&:hover{
+		background-image: url(../img/sprite.png);
+  		background-position: -360px 0px;
+        transition: top 2s ease-out 0.5s
+	}
+}	
+
+
+.icon-git{
+	&:hover{
+		background-image: url(../img/sprite.png);
+		background-position: -192px -257px;
+        transition: top 2s ease-out 0.5s
+	}
+}	
+
+.icon-lock {
+	padding-right: 25px;
+	&:hover{
+		background-image: url(../img/sprite.png);
+  		background-position: -312px -257px;
+        transition: top 2s ease-out 0.5s
+	}
+}
+
+/* ******* */
+
+.icon-vk_mob {
+    &:hover{
+        background-position: 0px -96px;
+        transition: top 2s ease-out 0.5s
+    }
+}
+
+.icon-tw_mob {
+    &:hover{  
+        background-position: -180px 0px;
+        transition: top 2s ease-out 0.5s
+    }
+}
+
+.icon-git_mob {
+    &:hover{
+        background-position: -180px -96px; 
+        transition: top 2s ease-out 0.5s 
+    }
+}
+
+.icon-fb_mob {
+    &:hover{
+        background-position: -270px -96px;
+        transition: top 2s ease-out 0.5s
+    }
+}
+
+/* ******* */
+.contacts-item{
+	&:hover{
+		@extend %hoverCont;
+		// color: #000;
+	}
+}	
+
+/***************************/
+.myWork-item.addnew{
+	opacity: 1;
+	&:hover{
+		opacity: 0.8;
+		background-color: #dad8d8;
+	}
+}		
+
+.navigation-item{
+	&:hover{
+			@extend %hoverNav;
+		}
+}
+
+
+.sub{
+	&:hover{
+		background-color: #48b79b;
+	}
+}
+
+.clr{
+	&:hover{
+		background-color: #cccaca;
+	}
+}
+
+
+
+
+

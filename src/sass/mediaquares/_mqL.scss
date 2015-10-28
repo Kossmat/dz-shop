@@ -1,0 +1,135 @@
+@include MQ(L) {
+// 800px to 1024
+.container{
+	@include container(650px);
+}
+/* ******** */ 
+/* ***************** */
+.base-header{
+	
+
+} 
+
+.logo-wrap {
+    height: 51px;
+    width: 65px;
+}  
+/* ***************** */
+.icon-burger.mobile{
+    display: none;
+}
+
+.icon-burger.planshet{
+    display: block;
+}
+
+    .icon-burger{
+        display: block;
+        float: right;
+        margin-top: 8px;
+        margin-left: 25px;
+        margin-right: 50px;
+        &:hover{
+            .menu-burger{
+                display: block;
+                right: 143px;
+                width: 200px;
+                z-index: 1;
+            }   
+        }
+    }
+
+    .menu-burger{
+        display: none;
+    } 
+.menu-burger{
+    // width: 60%;
+    float: left;
+    position: relative;
+    top: 40px;
+    right: 50%;
+    &:after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: 15%;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-bottom-color: #f7f8fa;
+    }
+
+    .navigation-item{
+        font-size: 16px;
+    }
+}
+/* ***************** */
+
+.menu{
+    display: none;
+}
+
+.info{
+	@include full;
+}
+
+.menu{
+	text-align: center;
+}
+
+
+.contacts{
+    .contacts-header{
+        display: none;
+    }
+
+    .contacts-list{
+        @include full;
+    }
+
+    .contacts-item{
+        display: inline-block;
+        @include span(33.3333%);
+        margin-right: 0;
+        
+        &:last-child{
+            border-radius: 0;
+        }
+    }
+
+    .contacts-link{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+
+    .icon-cont {
+        display: inline-block !important;
+    }
+}
+
+.bottom-contacts-wrap{
+    .icon-cont{
+        vertical-align: middle;
+    }
+}
+
+
+.bottom-contacts .social-icons{
+    display: none;
+}
+
+.fixid-bottom-footer{
+    // position: relative;
+}
+
+
+.lock{
+    padding-left: 20px;
+    width: 200px;
+}
+
+.hide{
+        display: block;
+    }
+/* ***************** */
+}/* end Lplus */

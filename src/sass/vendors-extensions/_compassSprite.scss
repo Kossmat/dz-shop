@@ -1,0 +1,87 @@
+/***************Sprite-Base****************/
+// $sprite-selectors hover, target, active, focus; 
+// $disable-magic-sprite-selectors: false;
+// $default-sprite-separator: "-"; 
+
+@mixin sprite-dimensions($map, $sprite) {
+  height: image-height(sprite-file($map, $sprite));
+  width: image-width(sprite-file($map, $sprite));
+}
+
+@mixin sprite-background-position($map, $sprite, $offset-x: 0, $offset-y: 0, $use-percentages: false) {
+  background-position: sprite-position($map, $sprite, $offset-x, $offset-y, $use-percentages);
+}
+
+@mixin sprite($map, $sprite, $dimensions: false, $offset-x: 0, $offset-y: 0, $use-percentages: false, $use-magic-selectors: not $disable-magic-sprite-selectors, $separator: $default-sprite-separator) {
+  @include sprite-background-position($map, $sprite, $offset-x, $offset-y, $use-percentages);
+  @if $dimensions {
+    @include sprite-dimensions($map, $sprite);
+  }
+  @if $use-magic-selectors {
+    @include sprite-selectors($map, $sprite, $sprite, $offset-x, $offset-y, $use-percentages, $separator);
+  }
+}
+
+@mixin sprites($map, $sprite-names, $base-class: false, $dimensions: false, $prefix: sprite-map-name($map), $offset-x: 0, $offset-y: 0, $use-percentages: false, $separator: $default-sprite-separator) {
+  @each $sprite-name in $sprite-names {
+    @if sprite_does_not_have_parent($map, $sprite-name) {
+      $full-sprite-name: #{$prefix}#{$separator}#{$sprite-name};
+      @if sprite_has_valid_selector($full-sprite-name) {
+        .#{$full-sprite-name} {
+          @if $base-class {
+            @extend #{$base-class};
+          }
+          @include sprite($map, $sprite-name, $dimensions, $offset-x, $offset-y, $use-percentages, $separator: $separator);
+        }
+      }
+    }
+  }
+}
+
+
+/**************Sprite-Image*****************/
+$sprite-default-size: 32px;
+$sprite-default-margin: 0px;  
+$sprite-image-default-width: $sprite-default-size; 
+$sprite-image-default-height: $sprite-default-size; 
+
+@mixin sprite-img($img, $col, $row: 1, $width: $sprite-image-default-width, $height: $sprite-image-default-height, $margin: $sprite-default-margin) {
+  @include sprite-background($img, $width, $height);
+  @include sprite-position($col, $row, $width, $height, $margin);
+}
+
+@mixin sprite-background($img, $width: $sprite-default-size, $height: $width) {
+  @include sprite-background-rectangle($img, $width, $height);
+}
+
+@mixin sprite-background-rectangle($img, $width: $sprite-image-default-width, $height: $sprite-image-default-height) {
+  background: image-url($img) no-repeat;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+}
+
+@mixin sprite-column($col, $width: $sprite-image-default-width, $margin: $sprite-default-margin) {
+  @include sprite-position($col, 1, $width, 0px, $margin);
+}
+
+@mixin sprite-row($row, $height: $sprite-image-default-height, $margin: $sprite-default-margin) {
+  @include sprite-position(1, $row, 0px, $height, $margin);
+}
+
+@mixin sprite-position($col, $row: 1, $width: $sprite-image-default-width, $height: $sprite-image-default-height, $margin: $sprite-default-margin) {
+  $x: ($col - 1) * -$width - ($col - 1) * $margin;
+  $y: ($row - 1) * -$height - ($row - 1) * $margin;
+  background-position: $x $y;
+}
+
+@mixin sprite-replace-text($map, $sprite, $dimensions: false, $offset-x: 0, $offset-y: 0) {
+  @include hide-text;
+  @include sprite($map, $sprite, $dimensions, $offset-x, $offset-y);
+  background-image: $map;
+  background-repeat: no-repeat;
+}
+
+@mixin sprite-replace-text-with-dimensions($map, $sprite, $offset-x: 0, $offset-y: 0) {
+  @include sprite-replace-text($map, $sprite, true, $offset-x, $offset-y);
+}

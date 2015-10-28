@@ -1,0 +1,153 @@
+.header{
+	background-color: $color-white;
+	width: 100%;	
+}
+.logo{
+	width: 100%;
+	height: auto;
+}
+
+.socials__top{
+	background-color: #fff;
+	padding: 20px 0;
+	
+	.social__list{
+		display: inline-block;
+	}
+
+	.contacts{
+		float: right;
+		display: inline-block;
+		
+
+		.contacts__address{
+			// font-size: 16px;
+			position: relative;
+			display: inline-block;
+    
+		    &:before {
+		        content: '';
+		        display: block;
+		        position: absolute;
+		        left: -17px;
+		        top: 3px;
+		        background: url('../img/images/map.png') no-repeat;
+		        height: 18px;
+		        width: 18px;
+		    }
+		}
+
+		.contacts__phone{
+			font-size: 17px;
+			margin-left: 80px;
+			position: relative;
+			display: inline-block;
+    
+		    &:before {
+		        content: '';
+		        display: block;
+		        position: absolute;
+		        left: -17px;
+		        top: 3px;
+		        background: url('../img/images/phone.png') no-repeat;
+		        height: 18px;
+		        width: 18px;
+		    }
+		}
+	}
+}
+
+.socials__item{
+	display: block;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -17px;
+        top: 3px;
+        background: url('../img/images/phone.png') no-repeat;
+        height: 18px;
+        width: 18px;
+    }
+}
+
+.header__link{
+	background-color: #f4f4f4;
+	padding: 30px 0 23px;
+	// display: inline-table;
+}
+
+.header__link_logo-wrap{
+	display:inline-block;
+	margin-right: 60px;
+	vertical-align: middle;
+}
+
+.logo-text{
+	font-size: 0;
+}
+
+.search{
+	display: inline-block;
+	vertical-align: middle;
+
+	.input__search{
+		padding: 5px;
+		width: 270px;
+	}
+
+	.input__btn{
+		margin: 0;
+		padding: 7px 15px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+.link{
+	// display: inline-table;
+	display: inline-block;
+	float: right;
+	font-size: 16px;
+	padding-top: 5px;
+	vertical-align: middle;
+	.link__item{
+		display: inline-block;
+	}
+
+	.link__item{
+		.link__link{
+			color: #000;
+			text-decoration: underline;
+			padding-left: 30px;
+		}
+
+		.link__link{
+			&:hover{
+				color: $color-brand;
+			}
+		}
+	}
+}
+
+/*.social-icons{
+	float: right;
+	padding: 25px 0 14px;
+	.social-item{
+		margin-left: 10px;
+		display: inline-block;
+	}
+
+	.social-link{
+		display: inline-block;
+	}
+}
+
+.logo-wrap{
+	height: 70px;
+	width: 95px;
+	display: inline-block;
+	margin: 13px 0 3px 0;
+}*/
+/* end base-header */

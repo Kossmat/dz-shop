@@ -1,0 +1,134 @@
+﻿// Requirements
+// ============
+
+// @import "susy";
+@import "../app/susy/sass/susy";
+
+$susy: (
+    output: float,
+  	columns: 12,
+  	gutters: .25,
+  	math: fluid,
+    column-width: false,
+    container: auto,
+    container-position: center,
+	use-custom: (rem: true)
+);
+
+$container-style: static;
+/*$susy: (
+  math: static,
+  columns: 12,
+  column-width: 66px,
+  container-position: center,
+  gutters: 1/4,
+  use-custom: (rem: true)
+);*/
+
+// @include layout(12 1/4 inside-static);
+
+@include border-box-sizing;
+
+.container{
+  width: 1100px;
+  margin: 0 auto;
+	// @include container(1100px);
+  // $container-style: static;
+	// @include clearfix;
+}
+/* ***** */
+.include__full{
+	@include full;
+}
+
+.wrapper{
+	@include container;
+  @include clearfix;
+}
+/* ******** */
+
+.main{
+  // @include container($susy);
+}
+
+
+
+.content{
+  @include container(743px);
+  // $container-style: static;
+  width: 743px;
+  display: inline-block;
+  @include clearfix;
+  margin-bottom: 70px;
+  float: right;
+}
+
+.sidebar{
+  @include container(332px);
+  // $container-style: static;
+  width: 332px;
+  display: inline-block;
+  float: left;
+  margin-right: 25px;
+}
+
+.info__column{
+  // @include span(543px);
+  // margin-right: 0;
+}
+
+/*.content__list{
+  @include gallery(1 of 3);
+  margin-right: 0;
+}*/
+
+/*.container-base-header{
+	@include container(1200px);
+}
+
+
+.menu{
+	@include span(3.2);
+	max-width: 250px;
+  float: left;
+  display: inline-block;
+}
+
+.info{
+	@include span(8.2);
+	margin-right: 0%;
+	max-width: 650px;
+  display: inline-block;
+}
+
+.lead{
+    @include container;
+}
+
+.image-wrap{
+    @include span(4);
+    margin-right: 0;
+}
+
+.worksheet-wrap{
+    @include span(8);
+    margin-right: 0;
+}
+
+.infobox-item{
+    @include container;
+}*/
+
+
+/*.check{
+    @include span(10);
+}*/
+
+/******* Page2 ****/
+/*.myWork-item{
+    @include gallery(1 of 3);
+}*/
+/****************/
+.copyright{
+
+}

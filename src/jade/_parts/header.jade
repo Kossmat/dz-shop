@@ -1,0 +1,31 @@
+//- header.jade
+include mixin
+header.header
+        .socials.socials__top
+            .container
+                ul.social__list
+                    - var socials = ['icon-vk', 'icon-fb', 'icon-tw']
+                        each social in socials
+                            li.socials__item
+                                a(href="#" class="socials__link socials__link_" + social)
+                .contacts
+                    span.contacts__address ул. Маяковская 6, офис 17
+                    span.contacts__phone +7(921) 123-12-13 
+
+.header__link
+    .container           
+        span.header__link_logo-wrap
+            a.logo-wrap__link
+                img.logo(src="img/logo-head.png" alt="cooltech")
+            span.logo-text
+                |COOLTECH    
+        .search
+            label.label 
+                input.input__search(type='search' placeholder='Что будем искать')
+                input.input__btn.btn(type='submit' value='Найти')
+
+        +nav(' link', ['Карта проезда', 'История заказов', 'Корзина'], 0)
+
+.navigation__wrap
+    .container
+        +nav(' navigation', ['Планшеты', 'Мобильные телефоны', "Mp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксесуары", "Бытовая техника"], 1)
