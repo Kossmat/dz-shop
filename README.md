@@ -1,8 +1,5 @@
-Это сайт портфолио - первый выпускной проект от Loftschool. Для того чтобы развернуть данный проект на своем компьютере необходимо:
-
-1. Открыть консоль
-2. Выполнить команду git clone URL_ репозитория
-3. Затем в консоли перейти в папку с проектом
-4. Выполнить команду npm install
-5. Выполнить команду bower install
-6. Выполнить команду gulp
+1. open console
+2. git clone URL_ repository
+3. print npm i in console
+4. print bower i in console
+5. print gulp in console
