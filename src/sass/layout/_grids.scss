@@ -30,11 +30,10 @@ $container-style: static;
 @include border-box-sizing;
 
 .container{
-  width: 1100px;
+  width: 1105px;
   margin: 0 auto;
-	// @include container(1100px);
-  // $container-style: static;
-	// @include clearfix;
+  position: relative;
+	@include clearfix;
 }
 /* ***** */
 .include__full{
@@ -54,27 +53,28 @@ $container-style: static;
 
 
 .content{
-  @include container(743px);
-  // $container-style: static;
   width: 743px;
   display: inline-block;
   @include clearfix;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
   float: right;
 }
 
 .sidebar{
-  @include container(332px);
-  // $container-style: static;
   width: 332px;
   display: inline-block;
   float: left;
   margin-right: 25px;
+  @include clearfix;
 }
 
 .info__column{
   // @include span(543px);
   // margin-right: 0;
+}
+
+.info-wrapper{
+  @include clearfix;
 }
 
 /*.content__list{

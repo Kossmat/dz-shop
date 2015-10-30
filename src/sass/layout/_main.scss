@@ -245,7 +245,7 @@
 	&:last-of-type{
 		// margin-right: 0;
 	}
-	.info__paragraph{
+	p{
 		margin-top: 20px;
 		text-indent: 36px;
 		text-align: justify;
@@ -254,4 +254,8 @@
 
 .column{
 	padding-left: 20px;
+}
+
+.first.column {
+    padding-left: 0;
 }

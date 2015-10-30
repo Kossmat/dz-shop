@@ -1,46 +1,91 @@
 //- each product in products
 //-         - var product = product
-- for (var i = 0; i < 3; i++)        
-    li.content__item
-        .content__item_img-wrap
-            img.content__item_img(src='../img/images/m640_front.png')
-        .content__list_img-load-wrap   
-            ul.content__list_img-load
-                li.content__item_img-load-wrap.content__item_img-load-wrap_active
-                    img(src='../img/images/m640_1.png')
-                li.content__item_img-load-wrap
-                    img(src='../img/images/m640_2.png')
-                li.content__item_img-load-wrap
-                    img(src='../img/images/m640_3.png')
+.products
+    ul.products__list
+        - for (var i = 0; i < 9; i++)        
+            li.products__item
+                .products__item-inner
+                    .products__left
+                        .products__slideshow
+                            .products__slideshow-block
+                                a(href="#").products__slideshow-display
+                                    img(src="http://lorempixel.com/200/200/sports/6" alt="").products__slideshow-img
+                                ul.products__slideshow-thumbs
+                                    - for (var n = 0; n < 3; n++) 
+                                        li.products__slideshow-item
+                                            a(href="#").products__slideshow-link
+                                                img(src="http://lorempixel.com/45/45/sports/" + n alt="").products__slideshow-thumb-img
+                            .products__article
+                                .products__article-word Артикул 
+                                .products__article-num 189238
+                        .products__desc
+                            .products__desc-title Microsoft Lumia 640 RM-1077
+                            ul.products__desc-options
+                                -var options = {'Тип Sim-карты': "Micro-SIM", 'Количество Sim-карт': "2", 'Цвет': "Белый", 'ОС':"Windows Phone", 'Связь 3G':"Есть", '4G(LTE)':"Нет", 'GPS-модуль':"A-GPS"}
+                                each  value, key in options
+                                    li.products__option-item
+                                        .products__option-key= key
+                                        .products__option-value= value
+                            div(class="products__rating" data-rating="3")
+                                ul.products__rating-stars
+                                    li.products__rating-stars-item.products__rating-stars-item_field
+                                    li.products__rating-stars-item.products__rating-stars-item_field
+                                    li.products__rating-stars-item
+                                    li.products__rating-stars-item
+                                    li.products__rating-stars-item 
+                                .products__rating-amount 2
+                    .products__right 
+                        .product__info
+                            .product__price 10 990
+                                i.rub
+                        .products__info-bottom
+                            a(href="#").products__buy-btn В корзину
+                            .products__avaylability
+                                |В наличии
 
-        .content__item_name = product.title
-            //- |product.title
 
-        ul.content__list_description
-            li.content__item_description
-                span.description__text-left Тип Sim-карты
-                span.description__text-right Micro-SIM
-            li.content__item_description
-                span.description__text-left Количество Sim-карт
-                span.description__text-right = product.count
-            li.content__item_description
-                span.description__text-left Цвет
-                span.description__text-right = product.color
-            li.content__item_description
-                span.description__text-left ОС
-                span.description__text-right = product.os
-            li.content__item_description
-                span.description__text-left Связь 3G
-                span.description__text-right = product.conect1
-            li.content__item_description
-                span.description__text-left 4G(LTE)
-                span.description__text-right = product.conect2
-            li.content__item_description 
-                span.description__text-left GPS-модуль
-                span.description__text-right = product.conect3
-        .starz
-        .price = product.price
-            //- |10 990
-        .btn-group
-            span В наличии
-            button.btn В корзину                           
+
+        //- li.content__item
+            .content__item_img-wrap
+                img.content__item_img(src='../img/images/m640_front.png')
+            .content__list_img-load-wrap   
+                ul.content__list_img-load
+                    - for (var j = 0; j < 3; j++)
+                        li.content__item_img-load-wrap.content__item_img-load-wrap_active
+                        img(src='../img/images/m640_1.png')
+                    //- li.content__item_img-load-wrap
+                    //-     img(src='../img/images/m640_2.png')
+                    //- li.content__item_img-load-wrap
+                    //-     img(src='../img/images/m640_3.png')
+
+            .content__item_name = product.title
+                //- |product.title
+
+            ul.content__list_description
+                li.content__item_description
+                    span.description__text-left Тип Sim-карты
+                    span.description__text-right Micro-SIM
+                li.content__item_description
+                    span.description__text-left Количество Sim-карт
+                    span.description__text-right = product.count
+                li.content__item_description
+                    span.description__text-left Цвет
+                    span.description__text-right = product.color
+                li.content__item_description
+                    span.description__text-left ОС
+                    span.description__text-right = product.os
+                li.content__item_description
+                    span.description__text-left Связь 3G
+                    span.description__text-right = product.conect1
+                li.content__item_description
+                    span.description__text-left 4G(LTE)
+                    span.description__text-right = product.conect2
+                li.content__item_description 
+                    span.description__text-left GPS-модуль
+                    span.description__text-right = product.conect3
+            .starz
+            .price = product.price
+                //- |10 990
+            .btn-group
+                span В наличии
+                button.btn В корзину                           

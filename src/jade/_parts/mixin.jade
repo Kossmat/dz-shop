@@ -8,7 +8,7 @@ mixin menu(menu_items)
                     - var linkatts = { 'href': top_item.link }
                     a()&attributes(linkatts)= top_item.title
 
-// ------------
+
 mixin link(link_items)
     .link
         ul.link__list
@@ -20,7 +20,7 @@ mixin link(link_items)
             - var links = ['map', 'history', 'busket']         
             each item in link_items  
                     a(href="#" class="links__link links__link_" + item)
-// ----------------
+
 mixin nav(className, items, activeIndx)
     nav(class= className)
         ul(class= className + "__list")
@@ -28,25 +28,33 @@ mixin nav(className, items, activeIndx)
                 li(class=className + "__item")
                     //- li(class=className + "__item " + ((activeIndx == indx) ? className + '__item' + '_active' : ''))
                     //- a(href="#" class= className + "__link")= item
-                    a(href="#" class= className + "__link" + ((activeIndx == indx) ? className + '__link' + '_active' : ''))= item                 
-// -----------
+                    a(href="#" class= className + "__link" + ((activeIndx == indx) ? className + '__link' + '_active' : ''))= item 
+
+mixin breadcramb(className, items, activeIndx)
+    div(class= className)
+        div.container    
+            ul(class= className + "__list")
+                each item, indx in items
+                    li(class=className + "__item")
+                        a(href="#" class= className + "__link" + ((activeIndx == indx) ? className + '__link' + '_active' : ''))= item                 
+
 mixin check(className, items, activeIndx)
-    nav(class= className)
-        ul(class= className + "__list")
+    div(class= className)
+        form(class= className + "__list")
             each item, indx in items
-                li(class=className + "__item")
-                    label
+                div(class=className + "__item")
+                    label(class=className + "__item" + "_label")
                         input(type='checkbox' class=className + "__real")
-                        span(type='checkbox' class=className + "__fake")    
+                        span(class=className + "__fake")    
                         span(class= className + "__label" + ((activeIndx == indx) ? className + '__label' + '_active' : ''))= item    
 
-// -----------
+
 mixin radio(className, items, activeIndx)
-    nav(class= className)
-        ul(class= className + "__list")
+    div(class= className)
+        form(class= className + "__list")
             each item, indx in items
-                li(class=className + "__item")
+                div(class=className + "__item")
                     label(class=className + "__item" + "_label")
                         input(type='radio' class=className + "__real")
-                        span(type='radio' class=className + "__fake")    
+                        span(class=className + "__fake")    
                         span(class= className + "__label" + ((activeIndx == indx) ? className + '__label' + '_active' : ''))= item 

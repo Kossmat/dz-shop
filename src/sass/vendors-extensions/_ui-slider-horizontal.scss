@@ -1,0 +1,25 @@
+.ui-slider-horizontal{
+    height: 3px !important;
+    border-radius: 0 !important;
+    border: 0 none !important;
+    background-color: #dee1e4 !important;
+    margin-bottom: 14px;
+
+    *{
+        outline: none !important;
+    }
+}
+
+.ui-slider-range{
+    background: #ff6e35 !important;
+}
+
+.ui-slider-handle{
+    // @include get-sprite($misc-sprite, slider-control);
+    background: url(../img/images/toggle.png) no-repeat !important;
+    top: 0 !important;
+    border: 0 none !important;
+    border-radius: 0 !important;
+    margin-left: -4px !important;
+    cursor: pointer !important;
+}

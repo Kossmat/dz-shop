@@ -2,6 +2,7 @@
     .price-controls{
         display: inline-block;
         white-space: nowrap;
+        margin-bottom: 15px;
     }
 
     .price__value {
@@ -17,7 +18,7 @@
 
 /***********************/
 
-.range__controls{
+/*.range__controls{
     position: relative;
     height: 40px;
     margin: 15px 0;
@@ -35,11 +36,11 @@
         height: 3px;
         background-color: $color-brand;
         // width: 54%
-    }
+    }*/
 
 /***********************/
 
-    .toggle{
+    /*.toggle{
         width: 8px;
         height: 13px;
         background-color: black;
@@ -60,10 +61,10 @@
             border-left: 5px solid white;
             border-right: 5px solid white;
             border-bottom: 5px solid black;
-        }*/
-    }
+        }
+    }*/
 
-    .min-toggle{
+    /*.min-toggle{
         left: 0;
         /*width: 10px;
         height: 10px;
@@ -81,9 +82,9 @@
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             border-bottom: 5px solid black;
-        }*/
-    }
-    .max-toggle{
+        }
+    }*/
+    /*.max-toggle{
         right: 0;
         /*width: 10px;
         height: 10px;
@@ -102,7 +103,5 @@
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
             border-bottom: 5px solid black;
-        }*/
-    }
-}
-
+        }
+    }*/

@@ -1,0 +1,138 @@
+.products__list_grids{
+    border: none;
+    overflow: auto;
+    border-radius: 0;
+    margin-left: -11px;
+    background: transparent;
+
+    .products__item{
+        display: inline-block;
+        width: 235px;
+        border-top: 0;
+        text-align: center;
+        border-radius: 5px;
+        border: $border;
+        margin-left: 11px;
+        margin-bottom: 11px;
+        background: #fff;
+    }
+
+    .products__slideshow{
+        width: auto;
+        text-align: center;
+        float: none;
+    }
+
+    .products__slideshow-display{
+        display: inline-block;
+    }
+
+    .products__slideshow-item{
+        display: inline-block;
+        float: none;
+    }
+
+    .products__slideshow-block {
+        margin-bottom: 9px;
+    }
+
+    .products__desc{
+        float: none;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .products__desc-title{
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 25px;
+        padding-top: 0;
+        white-space: nowrap;
+    }
+
+    .products__desc-options{
+        margin-bottom: 3px;
+    }
+
+    .products__article{
+        display: none;
+    }
+
+    .products__left{
+        float: none;
+    }
+
+    .products__right{
+        position: static;
+        width: auto;
+        text-align: center;
+    }
+
+    .products__item{
+        margin-bottom: 35px;
+    }
+
+    .products__item-inner{
+        padding: 10px 15px;
+    }
+
+    .products__rating-amount{
+        float: right;
+        margin-top: 6px;
+        margin-right: 24px;
+    }
+
+    .product__price{
+        text-align: center;
+        padding-top: 9px;
+        padding-bottom: 4px;
+    }
+
+    .product__info{
+        border: 0 none;
+        padding-left: 11px;
+    }
+
+    .products__info-bottom{
+        position: static;
+        @include clearfix;
+        // border: 0 none;
+    }
+
+    .products__buy-btn{
+        margin-bottom: 0;
+        padding: 6px 14px;
+    }
+
+    .products__avaylability{
+        float: left;
+        padding-top: 10px;
+    }
+
+    .products__article{
+        display: none;
+    }
+
+    .products__option-item{
+        @include clearfix;
+
+        &:nth-of-type(odd){
+            background-color: #e6e6e6;
+        }
+    }
+
+    .products__option-key{
+        display: block;
+        float: left;
+        width: auto;
+        line-height: 20px;
+        text-align: left;
+    }
+    .products__option-value{
+        display: block;
+        float: right;
+        width: auto;
+        line-height: 20px;
+        text-align: right;
+    }
+}

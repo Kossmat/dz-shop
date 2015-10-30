@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
+    compass = require('gulp-compass'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     jade = require('gulp-jade'),
@@ -56,6 +57,7 @@ var path = {
         // bower: 'src/app/*.js'
         
     },
+
     watch: {
         html: 'src/index.html',
         jade: 'src/jade/**/*.jade',
@@ -142,6 +144,20 @@ gulp.task('html:build', function () {
 });
 
 
+/* --------- scss-compass --------- */
+
+gulp.task('compass', function() {
+    gulp.src(paths.scss.location)
+        .pipe(plumber())
+        .pipe(compass({
+            config_file: paths.compass.configFile,
+            css: paths.compass.cssFolder,
+            sass: paths.compass.scssFolder,
+            image: paths.compass.imgFolder
+        }));
+});
+
+
 /**********************************************
 SASS
 **********************************************/
@@ -162,6 +178,16 @@ gulp.task('sass:build', function () {
         //     html: glob.sync('build/index.html')
         // }))
         // ///
+        //.pipe(compass({
+            //config_file: 'config.rb',
+            //includePaths: ['src/style/'],
+            //outputStyle: 'compressed',
+            //sourceMap: true,
+           //errLogToConsole: true,
+            //css: 'css',
+            //sass: 'sass'
+            //require: ['susy', 'breakpoint']
+        //}))
 
         .pipe(prefixer({browsers: [
                 '> 1%',

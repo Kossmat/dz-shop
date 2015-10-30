@@ -14,28 +14,20 @@ html( lang="ru-RU" )
         meta( name='viewport', content='width=device-width, initial-scale=1.0' )
         meta( name='description', content='A description of this page' )
         link( href='css/style.css', rel='stylesheet', type='text/css' )
-        //- link( href='css/jquery-ui.min.css', rel='stylesheet', type='text/css' )
-        link( href='css/vendor.css', rel='stylesheet', type='text/css' )
     body
         .wrapper
             .maincontent
                 include _parts/header
-                .container
-                    include _parts/breadcrumbs
-                    h2.name-page
-                        block title
+                include _parts/breadcrumbs
 
-                    .sidebar
-                        include _parts/sidebar
-                    .content
-                        block content
-        include _parts/info                              
+                block content   
+                //- include _parts/info                    
         include _parts/footer
 
 script(src='js/jquery-1.11.2.min.js')
 script(src='js/jquery.columnizer.js')
 script(src='js/jquery-ui.js')  
-//- script(src='js/jquery.select2.js')  
+script(src='js/select2.min.js')  
 //- script(src='js/require.min.js')
 script(src='js/main.js')
 //-script(src='js/clearCheckbox.js')///

@@ -1,63 +1,87 @@
-.sidebar__choose
-    +nav(' grade', ['Флагманы', 'Бюджетная линейка'], 1)
+.sidebar    
+    .sidebar__choose
+        +nav(' grade', ['Флагманы', 'Бюджетная линейка'], 1)
 
-.accordion.sidebar__wrapper
-    ul.accordion__list
-        li.accordeon__item                
-            //- .sidebar__choose_block.exist
-            a.sidebar__name.accordeon__trigger
-                |Наличие в магазинах
-            .accordeon__item__toggle    
-                +radio(' radio', ['Во всех магазинах', 'В ближайшем ко мне магазине'], 1)
-        // end exist
-
-        li.accordeon__item
-            .sidebar__choose_block.brand
+    .accordion.sidebar__wrapper
+        ul.accordion__list
+            li.accordeon__item                
+                //- .sidebar__choose_block.exist
                 a.sidebar__name.accordeon__trigger
-                    |Бренды
-                .accordeon__item__toggle
-                    +check(' check', ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'], 0, 1, 2)      
-                    a.sidebar__clear-filter
-                        |Сбросить фильтр
-        // end check-brand 
-
-        li.accordeon__item
-            .sidebar__choose_block.sidebar__price
-                a.sidebar__name.accordeon__trigger
-                    |Цена
-                .accordeon__item__toggle
-                    .range
-                        .price-controls-wrap
-                            .price-controls.price-controls_start 
-                                label от 
-                                input.min-price.price__value(type='text' value='0')
-                            .price-controls.price-controls_end     
-                                label до 
-                                input.max-price.price__value(value='100 000')
-
-                        .range__controls
-                            .range__scale
-                                .range__bar
-                            .toggle.min-toggle 
-                            .toggle.max-toggle           
-        // end price
-        
-        li.accordeon__item
-            .sidebar__choose_block.choose__block-color 
-                a.sidebar__name.accordeon__trigger
-                    |Цвет
+                    |Наличие в магазинах
                 .accordeon__item__toggle    
-                    - for (var i = 1; i < 13; i++) 
-                            label.checkbox    
-                                input.checkbox__real(type='checkbox')
-                                span.checkbox__fake 
-        // end color 
-        li.accordeon__item
-            .sidebar__choose_block.os    
-                a.sidebar__name.accordeon__trigger
-                    |Опреационные системы
-                .accordeon__item__toggle    
-                    +check(' check', ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'], 0, 1, 2)  
-                    a.sidebar__clear-filter(href="#")
-                        |Сбросить фильтр   
-        // end os
+                    +radio(' radio', ['Во всех магазинах', 'В ближайшем ко мне магазине'])
+            // end exist
+
+            li.accordeon__item
+                .sidebar__choose_block.brand
+                    a.sidebar__name.accordeon__trigger
+                        |Бренды
+                    .accordeon__item__toggle
+                        +check(' check', ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])      
+                        a.sidebar__clear-filter
+                            |Сбросить фильтр
+            // end check-brand 
+
+            //- li.accordeon__item
+                .sidebar__choose_block.sidebar__price
+                    a.sidebar__name.accordeon__trigger
+                        |Цена
+                    .accordeon__item__toggle
+                        .range
+                            .price-controls-wrap
+                                .price-controls.price-controls_start 
+                                    label от 
+                                    input.min-price.price__value(type='text' placeholder='0')
+                                .price-controls.price-controls_end     
+                                    label до 
+                                    input.max-price.price__value(placeholder='100 000')
+
+                            .range__controls
+                                .range__scale
+                                    .range__bar
+                                .toggle.min-toggle 
+                                .toggle.max-toggle           
+            
+            li.accordeon__item
+                .sidebar__choose_block.sidebar__price
+                    a.sidebar__name.accordeon__trigger
+                        |Цена
+                    .accordeon__item__toggle
+                        .filter__content
+                            .filter__slider
+                                .filter__slider-displays
+                                    .filter__slider-left
+                                        .filter__slider-text от
+                                        input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_from
+                                    .filter__slider-right
+                                        .filter__slider-text до
+                                        input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_to  
+                                div(class="filter__slider-element" data-min="0" data-max="32000")
+            // end price
+            
+            li.accordeon__item
+                .sidebar__choose_block.choose__block-color 
+                    a.sidebar__name.accordeon__trigger
+                        |Цвет
+                    //- .accordeon__item__toggle    
+                    //-     - for (var i = 1; i < 13; i++) 
+                    //-         label.checkbox    
+                    //-             input.checkbox__real(type='checkbox')
+                    //-             span.checkbox__fake
+
+                    .accordeon__item__toggle.filter__content
+                        ul.filter__colors
+                            - var colors = ['ffffff', 'cccccc', '000000', '0a3153', 'ff1800', 'fff343', 'fb914a', '92c37c', '40a6ff', '9870ad', 'dc78ad', '7f401d']
+                            each color in colors 
+                                li.filter__colors-item
+                                    a(href="#" style="background-color: #" + color).filter__color-link    
+            // end color 
+            li.accordeon__item
+                .sidebar__choose_block.os    
+                    a.sidebar__name.accordeon__trigger
+                        |Опреационные системы
+                    .accordeon__item__toggle    
+                        +check(' check', ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'])  
+                        a.sidebar__clear-filter(href="#")
+                            |Сбросить фильтр   
+            // end os

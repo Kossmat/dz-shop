@@ -2,20 +2,20 @@
     background-color: $color-white;
 
 	.navigation{
+        .navigation__list{
+            font-size: 0;
+            white-space: nowrap;
+        }
+
 		.navigation__item{
 			display: inline-block;
-			font-size: 0;
-			&:last-of-type{
-				.navigation__link{
-					padding-right: 0;
-				}
-	        }
 	    }
 	}
 
     .navigation__link{
         font-size: 16px;
-        padding: 14px 13px;
+        line-height: 18px;
+        padding: 17px 15px;
         display: block;
         color: #000;
         &:hover{

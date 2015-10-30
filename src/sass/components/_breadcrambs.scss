@@ -32,15 +32,25 @@
 
 .breadcramb__item{
     display: inline-block;
-    font-size: 12px;
+    &:before{
+        content: '>';
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
 }
 
-.breadcramb__item_link{
-    font-size: 12px;
+.breadcramb__link{
     color: $color-black;
+    line-height: 16px;
 }
 
-.breadcramb__item_link_active{
+.breadcramb__link_active{
     color: $color-brand;
     text-decoration: underline;
 }

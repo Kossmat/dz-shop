@@ -2,18 +2,22 @@
 @import "base/fonts";
 // @import "base/typography";
 
+// @import "vendors-extensions/slick";
+// @import "vendors-extensions/flexnav";
+// @import "vendors-extensions/sidr";
+@import "vendors-extensions/compassSprite";
+@import "vendors-extensions/ui-slider-horizontal";
+@import "vendors-extensions/select";
+
 @import "vendors/normalize";
+@import "vendors/jquery-ui";
+@import "vendors/select2";
 // @import "vendors/sanitize.scss";
 // @import "vendors/slick";
 // @import "vendors/slick-theme";
 // @import "vendors/flexnav";
 // @import "vendors/andy";
 // @import "vendors/guff";
-
-// @import "vendors-extensions/slick";
-// @import "vendors-extensions/flexnav";
-// @import "vendors-extensions/sidr";
-@import "vendors-extensions/compassSprite";
 
 // @import "helpers/function";
 @import "helpers/mixins";
@@ -42,19 +46,24 @@
 // @import "mediaquares/mqL";
 // @import "mediaquares/mqXL";
 
-
-@import "components/sidebarPrice";
+@import "components/accordion";
+@import "components/breadcrambs";
+@import "components/cardsProducts";
+@import "components/cp_grid-view";
+@import "components/cp_line-view";
 @import "components/pagination";
+@import "components/sidebarPrice";
+@import "components/sort";
 // @import "components/carousel";
 // @import "components/media";
 // @import "components/thumbnails";
 // @import "components/buttons";
-@import "components/breadcrambs";
+
 // @import "components/forms";
 // @import "components/icomoon";
 @import "components/sprite";
 // @import "components/addpro";
-@import "components/accordion";
+
 // @import "components/tabs";
 // @import "components/progbars";
 // @import "components/flexboxes";
