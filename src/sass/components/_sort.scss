@@ -3,7 +3,7 @@
     @include clearfix;
     border: 1px solid $color-brand-grey;
     border-radius: 5px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 }
 
 .sort__title{
@@ -21,7 +21,7 @@
 }
 
 .sort__select-wrap{
-    padding-top: 12px;
+    padding-top: 10px;
     padding-left: 20px;
 }
 
@@ -76,6 +76,13 @@
 //        }
 //
 //        &:hover{
+//            $hover-icon: $item + '-hover';
+//            .sort__view-icon{
+//               @include get-sprite($views-map, $hover-icon);
+//            }
+//        }
+//
+//        &.active{
 //            $hover-icon: $item + '-hover';
 //            .sort__view-icon{
 //               @include get-sprite($views-map, $hover-icon);

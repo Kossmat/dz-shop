@@ -5,6 +5,7 @@
         .navigation__list{
             font-size: 0;
             white-space: nowrap;
+            padding: 0px 11px;
         }
 
 		.navigation__item{
@@ -15,7 +16,7 @@
     .navigation__link{
         font-size: 16px;
         line-height: 18px;
-        padding: 17px 15px;
+        padding: 19px 14px;
         display: block;
         color: #000;
         &:hover{

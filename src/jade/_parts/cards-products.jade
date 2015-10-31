@@ -1,7 +1,7 @@
 //- each product in products
 //-         - var product = product
 .products
-    ul.products__list
+    ul.products__list#products__list
         - for (var i = 0; i < 9; i++)        
             li.products__item
                 .products__item-inner
@@ -26,14 +26,14 @@
                                     li.products__option-item
                                         .products__option-key= key
                                         .products__option-value= value
-                            div(class="products__rating" data-rating="3")
-                                ul.products__rating-stars
-                                    li.products__rating-stars-item.products__rating-stars-item_field
-                                    li.products__rating-stars-item.products__rating-stars-item_field
-                                    li.products__rating-stars-item
-                                    li.products__rating-stars-item
-                                    li.products__rating-stars-item 
-                                .products__rating-amount 2
+                            div(class="products__rating" data-rating="4")
+                                //- ul.products__rating-stars
+                                //-     li.products__rating-stars-item.products__rating-stars-item_field
+                                //-     li.products__rating-stars-item.products__rating-stars-item_field
+                                //-     li.products__rating-stars-item
+                                //-     li.products__rating-stars-item
+                                //-     li.products__rating-stars-item 
+                                //- .products__rating-amount 2
                     .products__right 
                         .product__info
                             .product__price 10 990
