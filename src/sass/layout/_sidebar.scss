@@ -17,6 +17,32 @@
     }
 }
 
+.sidebar__choose_block{
+    padding: 7px 30px 4px;
+    @include clearfix;
+}
+
+.choose_block-brand,
+.choose_block-os {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.choose__block-price{
+    padding-bottom: 18px;
+    .sidebar__name{
+        padding-top: 6px;
+    }
+}
+
+.choose__block-color{
+    .sidebar__name{
+        padding-top: 5px;
+        margin-bottom: 12px;
+    }
+}
+
+
 .sidebar__choose{
     background-color: $color-white;
     border: 1px solid #dee1e4;
@@ -224,8 +250,8 @@
     position: relative;
 }
 /************/    
-.brand,
-.os{
+.choose_block-brand,
+.choose_block-os{
     .check__real{
         position: absolute;
         top: 0;
@@ -275,8 +301,8 @@
 
 .filter__colors-item{
     display: inline-block;
-    margin-left: 10px;
-    margin-bottom: 8px;
+    margin-left: 14px;
+    margin-bottom: 16px;
     
     &:hover{
         box-shadow: 0 0 0 2px #ff6600;
@@ -304,7 +330,7 @@
 .filter__slider-input{
     border: 1px solid $color-brand-grey;
     border-radius: 5px;
-    padding: 10px 18px;
+    padding: 4px 18px;
     width: 83px;
     display: inline-block;
     vertical-align: middle;
@@ -316,3 +342,11 @@
     line-height: 16px;
     margin-right: 10px;
 }
+
+// &.active{
+//     .filter__title{
+//         &:after{
+//             @include get-sprite($select-tr-map, to-top);
+//         }
+//     }
+// }

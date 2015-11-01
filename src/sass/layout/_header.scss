@@ -12,24 +12,32 @@
 	padding: 21px 0;
 	
 	.social__list{
-		display: inline-block;
+		display: block;
+		width: 50%;
+		float: left;
+		text-align: left;
 	}
 
 	.contacts{
 		float: right;
-		display: inline-block;
+		display: block;
+		width: 50%;
+	    padding-top: 3px;
+    	padding-right: 6px;
+		text-align: right;
 		
 
 		.contacts__address{
 			// font-size: 16px;
 			position: relative;
 			display: inline-block;
+			left: -11px;
     
 		    &:before {
 		        content: '';
 		        display: block;
 		        position: absolute;
-		        left: -17px;
+		        left: -24px;
 		        top: 3px;
 		        background: url('../img/images/map.png') no-repeat;
 		        height: 18px;
@@ -38,16 +46,17 @@
 		}
 
 		.contacts__phone{
-			font-size: 17px;
-			margin-left: 80px;
+			font-size: 18px;
+		    margin-left: 95px;
 			position: relative;
 			display: inline-block;
+			color: #333;
     
 		    &:before {
 		        content: '';
 		        display: block;
 		        position: absolute;
-		        left: -17px;
+		        left: -24px;
 		        top: 3px;
 		        background: url('../img/images/phone.png') no-repeat;
 		        height: 18px;
@@ -91,7 +100,7 @@
 
 .header__link_logo-wrap{
 	display:inline-block;
-	margin-right: 60px;
+	margin-right: 56px;
 	vertical-align: middle;
 }
 
@@ -110,8 +119,9 @@
 		border-bottom-right-radius: 0;
 		width: 259px;
 		margin-right: -7px;
-		padding: 8px 15px;
-	    outline: none;
+		padding: 6px 14px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 
 	.input__btn{
@@ -120,8 +130,10 @@
 		border: 1px solid $color-brand;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
-		width: 78px;
-		height: 36px;
+		width: 85px;
+		height: 33px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 }
 

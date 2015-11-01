@@ -1,10 +1,9 @@
 .pagination{
     float: right;
-    margin-top: 35px;
-    margin-bottom: 16px;
+
     .pagi__item{
         display: inline-block;
-        margin-left: 3px;
+        // margin-left: 3px;
     }
 
     .pagi__link {
@@ -17,6 +16,7 @@
         display: block;
         padding: 4px 9px 2px;
         text-decoration: none;
+        font-size: 12px;
     }
 
     .pagi__link_active{

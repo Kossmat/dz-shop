@@ -5,15 +5,15 @@
     .accordion.sidebar__wrapper
         ul.accordion__list
             li.accordeon__item                
-                //- .sidebar__choose_block.exist
-                a.sidebar__name.accordeon__trigger
-                    |Наличие в магазинах
-                .accordeon__item__toggle    
-                    +radio(' radio', ['Во всех магазинах', 'В ближайшем ко мне магазине'])
+                .sidebar__choose_block.choose_block-exist
+                    a.sidebar__name.accordeon__trigger
+                        |Наличие в магазинах
+                    .accordeon__item__toggle    
+                        +radio(' radio', ['Во всех магазинах', 'В ближайшем ко мне магазине'])
             // end exist
 
             li.accordeon__item
-                .sidebar__choose_block.brand
+                .sidebar__choose_block.choose_block-brand
                     a.sidebar__name.accordeon__trigger
                         |Бренды
                     .accordeon__item__toggle
@@ -43,7 +43,7 @@
                                 .toggle.max-toggle           
             
             li.accordeon__item
-                .sidebar__choose_block.sidebar__price
+                .sidebar__choose_block.choose__block-price
                     a.sidebar__name.accordeon__trigger
                         |Цена
                     .accordeon__item__toggle
@@ -77,7 +77,7 @@
                                     a(href="#" style="background-color: #" + color).filter__color-link    
             // end color 
             li.accordeon__item
-                .sidebar__choose_block.os    
+                .sidebar__choose_block.choose_block-os    
                     a.sidebar__name.accordeon__trigger
                         |Опреационные системы
                     .accordeon__item__toggle    
