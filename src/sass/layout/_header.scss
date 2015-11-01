@@ -1,3 +1,5 @@
+@import "../sprites/sprite";
+
 .header{
 	background-color: $color-white;
 	width: 100%;	
@@ -31,15 +33,14 @@
 			// font-size: 16px;
 			position: relative;
 			display: inline-block;
-			left: -11px;
     
 		    &:before {
 		        content: '';
 		        display: block;
 		        position: absolute;
-		        left: -24px;
-		        top: 3px;
-		        background: url('../img/images/map.png') no-repeat;
+		        left: -17px;
+		        top: 1px;
+		        @include sprite($map);
 		        height: 18px;
 		        width: 18px;
 		    }
@@ -47,7 +48,7 @@
 
 		.contacts__phone{
 			font-size: 18px;
-		    margin-left: 95px;
+		    margin-left: 107px;
 			position: relative;
 			display: inline-block;
 			color: #333;
@@ -57,8 +58,8 @@
 		        display: block;
 		        position: absolute;
 		        left: -24px;
-		        top: 3px;
-		        background: url('../img/images/phone.png') no-repeat;
+		        top: 4px;
+		        @include sprite($phone);
 		        height: 18px;
 		        width: 18px;
 		    }
@@ -69,27 +70,32 @@
 .header .socials__item{
 	display: inline-block;
     position: relative;
-    height: 30px;
-    width: 30px;
-    &:nth-of-type(1){
-		background: url('../img/images/icon/fb.png') no-repeat;
+    padding-right: 8px;
+
+    .socials__link{
+        display: inline-block;
     }
-    &:nth-of-type(2){
-    	background: url('../img/images/icon/vk.png') no-repeat;
+
+    .socials__link_icon-fb{
+        @include sprite($fb_header);
+            &:hover{
+                @include sprite($fb_header-hover);
+            }
     }
-    &:nth-of-type(3){
-    	background: url('../img/images/icon/tw.png') no-repeat;
+
+    .socials__link_icon-vk{
+        @include sprite($vk_header);
+            &:hover{
+                @include sprite($vk_header-hover);
+            }
     }
-    /*&:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: -17px;
-        top: 3px;
-        background: url('../img/images/icon/fb.png') no-repeat;
-        height: 30px;
-        width: 30px;
-    }*/
+
+    .socials__link_icon-tw{
+        @include sprite($tw_header);
+            &:hover{
+                @include sprite($tw_header-hover);
+            }
+    }
 }
 
 .header__link{
@@ -117,7 +123,7 @@
 		border-radius: $border-radius;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-		width: 259px;
+		width: 288px;
 		margin-right: -7px;
 		padding: 6px 14px;
 		font-size: 14px;
@@ -163,23 +169,4 @@
 	}
 }
 
-/*.social-icons{
-	float: right;
-	padding: 25px 0 14px;
-	.social-item{
-		margin-left: 10px;
-		display: inline-block;
-	}
-
-	.social-link{
-		display: inline-block;
-	}
-}
-
-.logo-wrap{
-	height: 70px;
-	width: 95px;
-	display: inline-block;
-	margin: 13px 0 3px 0;
-}*/
 /* end base-header */

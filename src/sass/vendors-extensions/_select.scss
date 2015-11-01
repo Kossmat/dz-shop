@@ -1,4 +1,5 @@
 // $select-tr-map: sprite-map('icons/select-tr/ *png, $spacing: 50px');
+@import "../sprites/sprite";
 
 .select2-container{
     width: 146px !important;
@@ -6,7 +7,7 @@
     .select2-selection__rendered{
             border: 1px solid #e4ebee !important;
             border-radius: 5px !important;
-            padding: 5px 15px !important;
+            padding: 6px 10px !important;
             line-height: 14px !important;
             outline: none !important;
             font-size: 14px !important;
@@ -56,3 +57,25 @@
         }
     }*/
 }
+
+.select2-selection__arrow{ 
+    b{
+        @include sprite($down_s);
+        // margin-left: -10px !important;
+        height: 9px !important;
+        width: 13px !important;
+        border: 0 none !important;
+        margin-top: 9px !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+}
+
+    &.select2-container--open{
+        b{
+            @include sprite($up_s);
+        }
+    }    
+

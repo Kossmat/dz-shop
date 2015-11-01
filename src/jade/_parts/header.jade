@@ -4,7 +4,7 @@ header.header
         .socials.socials__top
             .container
                 ul.social__list
-                    - var socials = ['icon-vk', 'icon-fb', 'icon-tw']
+                    - var socials = ['icon-fb', 'icon-vk', 'icon-tw']
                         each social in socials
                             li.socials__item
                                 a(href="#" class="socials__link socials__link_" + social)
@@ -21,7 +21,7 @@ header.header
                 |COOLTECH    
         form.search
             label.label 
-                input.input__search(type='search' placeholder='Что будем искать')
+                input.input__search(type='text' placeholder='Что будем искать')
                 input.input__btn.btn(type='submit' value='Найти')
 
         +nav(' link', ['Карта проезда', 'История заказов', 'Корзина'])

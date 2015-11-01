@@ -91,16 +91,21 @@
         margin-bottom: 2px;
     }
 
+    .products__rating-stars {
+        margin-left: 42px;
+    }
+
     .products__rating-amount{
         float: right;
         margin-top: 6px;
-        margin-right: 24px;
+        margin-right: 32px;
     }
 
     .product__price{
         text-align: center;
-        padding-top: 7px;
+        padding-top: 5px;
         padding-bottom: 4px;
+        padding-right: 5px;
     }
 
     .product__info{

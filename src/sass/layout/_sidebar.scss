@@ -1,7 +1,9 @@
+@import "../sprites/sprite";
+
 .sidebar__name{
     display: block;
     font-size: 16px;
-    font-weight: bold;
+    font-family: 'open_sanssemibold';
     margin-bottom: 15px;
     position: relative;
     
@@ -9,27 +11,43 @@
         content: '';
         display: block;
         position: absolute;
-        right: 10px;
+        right: -19px;
         top: 10px;
-        background: url('../img/images/up.png') no-repeat;
+        @include sprite($up);
+        // background: url('../img/images/up.png') no-repeat;
+        height: 11px;
+        width: 18px;
+    }
+}
+
+.sidebar__name.hide-margin{
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -19px;
+        top: 10px;
+        opacity: .2;
+        @include sprite($down);
+        // background: url('../img/images/down.png') 0 0 no-repeat;
         height: 11px;
         width: 18px;
     }
 }
 
 .sidebar__choose_block{
-    padding: 7px 30px 4px;
+    // padding: 7px 30px 4px;
     @include clearfix;
 }
 
 .choose_block-brand,
 .choose_block-os {
-    padding-top: 10px;
-    padding-bottom: 15px;
+    // padding-top: 10px;
+    // padding-bottom: 15px;
 }
 
 .choose__block-price{
-    padding-bottom: 18px;
+    padding-bottom: 8px;
     .sidebar__name{
         padding-top: 6px;
     }
@@ -37,11 +55,11 @@
 
 .choose__block-color{
     .sidebar__name{
-        padding-top: 5px;
+        // padding-top: 5px;
         margin-bottom: 12px;
     }
 }
-
+/****************************/
 
 .sidebar__choose{
     background-color: $color-white;
@@ -105,11 +123,27 @@
     }
 
    .radio__fake + .radio__label {
-        background: url(../img/images/radio__unchek.png) left center no-repeat;
+        width: 270px;
+        &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include sprite($radio_unchek);
+        }
    }
 
    .radio__real:checked + .radio__fake + .radio__label{
-        background-image: url(../img/images/radio__checked.png);
+        width: 270px;
+       &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include sprite($radio_checked);
+        }
    }
 /************************/
 .choose__block-color.accordeon__item__toggle{
@@ -120,6 +154,7 @@
     text-decoration: underline;
     color: #40a6ff;
     display: block;
+    padding-bottom: 10px;
 }
 
 .sidebar__item {
@@ -161,8 +196,8 @@
 
 .checkbox__fake{
     display: block;
-    width: 35px;
-    height: 35px;
+    // width: 35px;
+    // height: 35px;
     border: 1px solid #dee1e4;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -172,7 +207,7 @@
     }
 }
 /*color-picker*/
-.checkbox{
+/*.checkbox{
     &:nth-of-type(1){
         .checkbox__fake{
             background-color: #fff;
@@ -233,7 +268,7 @@
             background-color: #7f401d;
         }    
     }
-}
+}*/
 
 
     .checkbox__item{
@@ -244,6 +279,9 @@
 .check__item {
     display: block;
     margin-bottom: 15px;
+    &:last-of-type{
+        margin-bottom: 13px;
+    }
 }
 
 .check__item_label{
@@ -270,20 +308,54 @@
 
    .check__fake + .check__label {
         cursor: pointer;
-        background: url(../img/images/check__Off.png) left center no-repeat;
+        width: 160px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include sprite($check_off);
+        }
     }
 
     .check__real:checked + .check__fake + .check__label{
-        background-image: url(../img/images/checkbox__brOn.png);
-        // background-image: url(../img/images/check__On.png);
+        width: 160px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include sprite($checkbox_bron);
+        }
+
     } 
 
    .check__fake + .check__label_active{
-        background: url(../img/images/checkbox__brOff.png) left center no-repeat;
+        width: 160px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include sprite($checkbox_broff);
+        }
+
    }  
 
     .check__real:checked + .check__fake + .check__label_active {
-        background-image: url(../img/images/checkbox__brOn.png);
+        width: 160px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include sprite($checkbox_bron);
+        }
+
     }  
  }
  /************/ 
@@ -342,11 +414,3 @@
     line-height: 16px;
     margin-right: 10px;
 }
-
-// &.active{
-//     .filter__title{
-//         &:after{
-//             @include get-sprite($select-tr-map, to-top);
-//         }
-//     }
-// }

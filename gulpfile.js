@@ -260,10 +260,10 @@ SPRITE
     var spriteData = gulp.src(path.src.sprite)
     .pipe(spritesmith({
         imgName: 'sprite.png',
-        cssName: 'sprite.css',
+        cssName: 'sprite.scss',
         //escaped_image: 'nested/dir/sprite.png',
-        source_image: '../img/sprite.png',
-        padding: 20
+        //source_image: '../img/sprite.png',
+        padding: 40
     }));
     spriteData.pipe(gulp.dest(path.build.sprite))
     .pipe(reload({stream: true}));
@@ -276,11 +276,11 @@ gulp.task(
     'build', [
     'jade:build',
     //'html:build',
-    'sass:build'
+    'sass:build',
     // 'bower:build',
     //'js:build'
     // 'fonts:build',
-    // 'sprite:build',
+    //'sprite:build'
     // 'image:build'
 ]);
 
