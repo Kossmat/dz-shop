@@ -154,11 +154,10 @@
     display: inline-block;
     vertical-align: middle;
     @include sprite($star_empty);
-    margin-right: 3px;
+    margin-right: 4px;
 
     &.products__rating-stars-item_field{
         @include sprite($star_red);
-        margin-right: 0;
     }
 }
 
