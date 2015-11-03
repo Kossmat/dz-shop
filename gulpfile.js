@@ -144,20 +144,6 @@ gulp.task('html:build', function () {
 });
 
 
-/* --------- scss-compass --------- */
-
-gulp.task('compass', function() {
-    gulp.src(paths.scss.location)
-        .pipe(plumber())
-        .pipe(compass({
-            config_file: paths.compass.configFile,
-            css: paths.compass.cssFolder,
-            sass: paths.compass.scssFolder,
-            image: paths.compass.imgFolder
-        }));
-});
-
-
 /**********************************************
 SASS
 **********************************************/
